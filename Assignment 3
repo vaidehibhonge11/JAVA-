@@ -1,0 +1,46 @@
+abstract class Shape
+{
+    int a=5;
+    int b=7;
+    abstract void printArea();
+}
+ class Rectangle extends Shape
+{
+    int l;
+    public void printArea()
+    {
+        l=a*b;
+        System.out.println("Area of rectangle:"+(l));
+    }
+    
+}
+class Triangle extends Shape
+{
+    double m;
+    public void printArea()
+    {
+        m=0.5*a*b;
+         System.out.println("Area of triangle:"+(m));
+    }
+}
+class Circle extends Shape
+{
+    double n;
+    public void printArea()
+    {
+        n=3.142*a*a;
+         System.out.println("Area of circle:"+(n));
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+	System.out.println("Hello World");
+	Rectangle r= new Rectangle();
+	r.printArea();
+	Triangle t= new Triangle();
+	t.printArea();
+	Circle c= new Circle();
+	c.printArea();
+	}
+}
